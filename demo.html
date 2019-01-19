@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src ="mds.js"></script>
+	<script src ="script.js"></script>
+	<link rel="stylesheet" href="mds.css">
+	<title></title>
+</head>
+<body>
+		
+
+<main class="mds-main-container">
+	<div class="mds-main-wrapper">
+		<header class="mds-header">Ux-Design Labb 1</header>
+
+			<!-- Text field -->
+		
+			<div class="mds-text-field">
+				<input type="text" class="mds-text-field__input">
+				<span class="mds-text-field__border"></span>
+				<label class="mds-text-field__label">Namn</label>
+			
+				
+			</div>
+
+			<!-- Radio Button -->
+
+
+	<label class="mds-radio">
+			<input type="radio" class="mds-radio__input" name="radio">
+			<span class="mds-radio__span"></span>
+			<span class="mds-radio__innerSpan"></span>
+		</label>
+		<label class="mds-radio">
+				<input type="radio" class="mds-radio__input" name="radio">
+				<span class="mds-radio__span"></span>
+				<span class="mds-radio__innerSpan"></span>
+		</label>
+
+
+			<!-- Checkbox -->
+
+		
+		<label class="mds-checkbox">
+				<input type="checkbox" class="mds-checkbox__input">
+				<span class="mds-checkbox__span"></span>
+		</label>
+
+			<!-- Switch -->
+
+
+		<label class="mds-switch">
+				<input type="checkbox" class="mds-switch__input">
+				<span class="mds-switch__span"></span>	
+			</label>
+
+		<div class="mds-disableEnable">
+			<button onclick="disable()" class="mds-disableEnable__buttons">Disable all</button>
+			<button onclick="enable()" class="mds-disableEnable__buttons">Enable all</button>
+		</div>
+	</div>
+
+</main>
+
+<script>	
+			
+	const fieldOfText = document.querySelector(".mds-text-field");
+	mds.textField(fieldOfText);
+		
+</script>
+	
+
+</body>
+</html>

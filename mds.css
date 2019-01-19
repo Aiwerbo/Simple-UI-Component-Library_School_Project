@@ -1,0 +1,301 @@
+main{
+    position: absolute;
+    margin-top: 100px;
+    width: 350px;
+    height: 800px;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mds-main-wrapper{
+    width: 350px;
+    height: 500px;
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2)
+}
+
+.mds-header{
+        
+    width: 350px;
+    height: 120px;
+    background-color: #F44336;
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 120px;
+    transition: .3s;
+}
+
+.mds-text-field{
+    position: relative;
+    padding-left: 30px;
+    width: 280px;
+    height: 60px; 
+   
+}
+
+
+.mds-text-field__input{
+    outline: none;
+    margin-top: 20px;
+    padding-left: 12px;
+    
+    display: block;
+    height: 56px;
+    border: 0px;
+    background-color: #ccc;
+    border-radius: 4px 4px 0px 0px;
+    
+    
+    border-bottom: 1px solid #00000099; 
+    padding-top: 16px;
+    box-sizing: border-box;
+    
+    width: 100%; /*  */
+
+    
+}
+
+.mds-text-field__input ~ .mds-text-field__border{
+
+    position: absolute;
+    bottom: 4px;
+    left: 30px;
+    width: 0;
+    height: 2px;
+    background-color: #F44336;
+    transform: scaleX(0); 
+    padding-left: 20px;    
+
+}
+
+.mds-text-field__input:focus ~ .mds-text-field__border{
+    width: 260px;
+    transform: scaleX(1); 
+    transition: transform 250ms ease-in-out;
+}
+
+.mds-text-field__input:disabled{
+    background-color: #eeeeee;
+   border-bottom: 1px solid #ccc;
+}
+
+.mds-text-field__label{
+    
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #00000099;
+    top: -38px;
+    left: 12px;
+    pointer-events: none;
+    transition: .3s ease;
+    
+    
+}
+.mds-text-field__input--inputActive{
+    
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    top: -52px;
+    height: 40px;
+    left: 12px;
+    color: #00000099; 
+    
+}
+
+/* Switch */
+
+.mds-switch{
+    position: absolute;
+    margin: 30px;
+    display: block;
+    width: 36px;
+    height: 16px;
+}
+
+.mds-switch__input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.mds-switch__span{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.mds-switch--span{
+    background-color: #eeeeee;
+}
+
+.mds-switch__span:before{
+    position: absolute;
+    content: " ";
+    height: 20px;
+    width: 20px;
+    left: -5px;
+    bottom: -1px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.mds-switch__input:checked + .mds-switch__span{
+    background-color: #F44336;
+}
+
+.mds-switch__input:checked + .mds-switch__span::before{
+    transform: translateX(26px);
+} 
+
+.mds-switch__input:checked:disabled + .mds-switch__span{
+    background-color: #eeeeee;
+}
+
+/* Checkbox */
+
+.mds-checkbox{
+    
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.mds-checkbox__input{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    opacity: 0;
+}
+
+.mds-checkbox__span{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: #0000008a;
+}
+
+.mds-checkbox__input + .mds-checkbox__span::before{
+    content: ' ';
+    box-sizing: border-box;
+    display: inline-block;
+    border: solid 2px;
+    border-radius: 2px;
+    border-color: inherit;
+    width: 24px;
+    height: 24px;
+    transition: border-color 0.3s, background-color 0.3s;
+
+} 
+
+.mds-checkbox__input:checked + .mds-checkbox__span::before{
+    content: ' ';
+    box-sizing: border-box;
+    display: inline-block;
+    border: 0px;
+    background-color: #F44336;
+    transition: border-color 0.2s, background-color 0.2s;
+    width: 24px;
+    height: 24px;
+    transition: .3s;
+
+}
+.mds-checkbox__input:checked + .mds-checkbox__span::after{
+    position: absolute;
+    content: "  ";
+    display: inline-block;
+    border-color: inherit;
+    left: 3px;
+    top: 3px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px white;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+}
+
+.mds-checkbox__input:checked:disabled + .mds-checkbox__span::before{
+    background-color: #eeeeee;
+}
+
+/* Radiobutton */
+
+.mds-radio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 30px;
+    width: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+.mds-radio__span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid;
+    border-color: #00000089;
+    border-radius: 50%;
+}
+
+.mds-radio__input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.mds-radio__input:checked ~ .mds-radio__span {
+    background-color: #F44336;
+    border-color: #F44336;
+    height: 20px;
+    width: 20px;
+    transition-duration: .4s;
+}
+
+.mds-radio__input:checked:disabled ~ .mds-radio__span {
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+}
+
+.mds-radio .mds-radio__input:checked ~ .mds-radio__innerSpan{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid white ;
+    border-radius: 50%;
+
+}
+
+.mds-disableEnable__buttons{
+    position: relative;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 0px 0px 20px;
+    display: block;
+    top: 63px;
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: #F44336;
+    outline: none;
+}
