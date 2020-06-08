@@ -110,10 +110,12 @@ main{
 
 .mds-switch{
     position: absolute;
-    margin: 30px;
+    margin-top: 46px;
+    margin-left: 30px;
     display: block;
     width: 36px;
     height: 16px;
+    
 }
 
 .mds-switch__input{
